@@ -12,18 +12,18 @@ RUN apt update && \
 
 RUN mamba install \
     keras \
-    r-cherryblossom \
+    r::r-cherryblossom \
     r-dt \
     r-fivethirtyeight \
     r-kableextra \
     r-keras \
     r-learnr \
-    r-Lock5Data \
+    r::r-lock5data \
     r-mosaic \
     r-mosaiccore \
     r-mosaicdata \
     r-network \
-    r-openintro \
+    r::r-openintro \
     r-palmerpenguins \
     r-tensorflow \
     tensorflow-cpu && \
