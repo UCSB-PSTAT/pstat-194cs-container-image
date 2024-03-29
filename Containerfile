@@ -13,6 +13,7 @@ RUN apt update && \
 RUN mamba install \
     keras \
     r-cherryblossom \
+    r-dt \
     r-fivethirtyeight \
     r-kableextra \
     r-keras \
