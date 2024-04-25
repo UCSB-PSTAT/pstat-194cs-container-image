@@ -15,6 +15,8 @@ RUN mamba install \
     r::r-cherryblossom \
     r-dt \
     r-fivethirtyeight \
+    r-igraph \
+    r::r-igraphdata \
     r-kableextra \
     r-keras \
     r-learnr \
