@@ -12,9 +12,11 @@ RUN apt update && \
 
 RUN mamba install \
     keras \
+    r-ape \
     r::r-cherryblossom \
     r-dt \
     r-fivethirtyeight \
+    r-ggraph \
     r-igraph \
     r::r-igraphdata \
     r-kableextra \
@@ -27,7 +29,9 @@ RUN mamba install \
     r-network \
     r::r-openintro \
     r-palmerpenguins \
+    r-statnet \
     r-tensorflow \
+    r-tidygraph
     tensorflow-cpu && \
     /usr/local/bin/fix-permissions "${CONDA_DIR}" || true
 
