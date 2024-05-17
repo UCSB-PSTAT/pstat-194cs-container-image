@@ -31,7 +31,7 @@ RUN mamba install \
     r-palmerpenguins \
     r-statnet \
     r-tensorflow \
-    r-tidygraph
+    r-tidygraph \
     tensorflow-cpu && \
     /usr/local/bin/fix-permissions "${CONDA_DIR}" || true
 
