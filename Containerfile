@@ -10,7 +10,7 @@ RUN apt update && \
     apt clean && \
     ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-RUN mamba install \
+RUN conda install \
     keras \
     r-ape \
     r::r-cherryblossom \
