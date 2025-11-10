@@ -10,6 +10,8 @@ RUN apt update && \
     apt clean && \
     ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
+RUN pip install tensorflow-cpu
+
 RUN conda install \
     keras \
     r-ape \
@@ -31,8 +33,7 @@ RUN conda install \
     r-palmerpenguins \
     r-statnet \
     r-tensorflow \
-    r-tidygraph \
-    tensorflow-cpu && \
+    r-tidygraph  && \
     /usr/local/bin/fix-permissions "${CONDA_DIR}" || true
 
 
