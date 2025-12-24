@@ -72,6 +72,7 @@ pipeline {
                             sh 'podman run -it --pull=never --rm localhost/$IMAGE_NAME R -e "library(\"RColorBrewer\")"'
                             sh 'podman run -it --pull=never --rm localhost/$IMAGE_NAME R -e "library(\"rmarkdown\")"'
                             sh 'podman run -it --pull=never --rm localhost/$IMAGE_NAME R -e "library(\"RSQLite\")"'
+                            sh 'podman run -it --pull=never --rm localhost/$IMAGE_NAME R -e "library(\"skimr\")"'
                             sh 'podman run -it --pull=never --rm localhost/$IMAGE_NAME R -e "library(\"statnet\")"'
                             sh 'podman run -it --pull=never --rm localhost/$IMAGE_NAME R -e "library(\"stats\")"'
                             sh 'podman run -it --pull=never --rm localhost/$IMAGE_NAME R -e "library(\"tensorflow\")"'
