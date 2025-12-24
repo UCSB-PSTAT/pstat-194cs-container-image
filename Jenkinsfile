@@ -49,6 +49,7 @@ pipeline {
                             sh 'podman run -it --pull=never --rm localhost/$IMAGE_NAME R -e "library(\"emo\")"'
                             sh 'podman run -it --pull=never --rm localhost/$IMAGE_NAME R -e "library(\"fivethirtyeight\")"'
                             sh 'podman run -it --pull=never --rm localhost/$IMAGE_NAME R -e "library(\"gargle\")"'
+                            sh 'podman run -it --pull=never --rm localhost/$IMAGE_NAME R -e "library(\"GGally\")"'
                             sh 'podman run -it --pull=never --rm localhost/$IMAGE_NAME R -e "library(\"ggraph\")"'
                             sh 'podman run -it --pull=never --rm localhost/$IMAGE_NAME R -e "library(\"graphics\")"'
                             sh 'podman run -it --pull=never --rm localhost/$IMAGE_NAME R -e "library(\"here\")"'
