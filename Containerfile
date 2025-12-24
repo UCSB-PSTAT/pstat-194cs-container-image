@@ -14,26 +14,40 @@ RUN pip install tensorflow-cpu
 
 RUN conda install \
     keras \
+    r-car \
+    r-cardata \
     r-ape \
     r::r-cherryblossom \
+    r-dbi \
+    r-dbplyr \
     r-dt \
     r-fivethirtyeight \
+    r-gargle \
+    r-ggally \
     r-ggraph \
     r-igraph \
     r::r-igraphdata \
     r-kableextra \
     r-keras \
+    r-knitr \
+    r-leaflet \
     r-learnr \
     r::r-lock5data \
+    r-mass \
     r-mosaic \
     r-mosaiccore \
     r-mosaicdata \
     r-network \
     r::r-openintro \
     r-palmerpenguins \
+    r-rcolorbrewer \
+    r-rmarkdown \
+    r-rsqlite \
+    r-skimr \
     r-statnet \
     r-tensorflow \
-    r-tidygraph  && \
+    r-tidygraph \
+    r-tidyverse && \
     /usr/local/bin/fix-permissions "${CONDA_DIR}" || true
 
 
