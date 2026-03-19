@@ -17,7 +17,6 @@ RUN conda install \
     r-car \
     r-cardata \
     r-ape \
-    r::r-cherryblossom \
     r-dbi \
     r-dbplyr \
     r-dt \
@@ -26,20 +25,16 @@ RUN conda install \
     r-ggally \
     r-ggraph \
     r-igraph \
-    r::r-igraphdata \
     r-kableextra \
     r-keras \
     r-knitr \
     r-leaflet \
     r-learnr \
-    r::r-lock5data \
     r-mass \
     r-mosaic \
     r-mosaiccore \
     r-mosaicdata \
     r-network \
-    r::r-openintro \
-    r-palmerpenguins \
     r-rcolorbrewer \
     r-rmarkdown \
     r-rsqlite \
@@ -53,7 +48,7 @@ RUN conda install \
 
 
 RUN R -e 'devtools::install_github("hadley/emo")' && \
-    R -e "install.packages(c('tutorial.helpers'), repos = 'https://cloud.r-project.org/', Ncpus = parallel::detectCores())"
+    R -e "install.packages(c('cherryblossom', 'igraphdata', 'Lock5Data', 'openintro', 'palmerpenguins', 'tutorial.helpers'), repos = 'https://cloud.r-project.org/', Ncpus = parallel::detectCores())"
 
 USER $NB_USER
 
