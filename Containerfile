@@ -47,7 +47,7 @@ RUN conda install \
 
 
 
-RUN R -e 'devtools::install_github("hadley/emo")' && \
+RUN R -e 'pak::pkg_install("hadley/emo")' && \
     R -e "install.packages(c('cherryblossom', 'igraphdata', 'Lock5Data', 'openintro', 'palmerpenguins', 'tutorial.helpers'), repos = 'https://cloud.r-project.org/', Ncpus = parallel::detectCores())"
 
 USER $NB_USER
