@@ -12,37 +12,38 @@ RUN apt update && \
 
 RUN pip install tensorflow-cpu
 
-RUN mamba install \
-    keras \
-    r-car \
-    r-cardata \
-    r-ape \
-    r-dbi \
-    r-dbplyr \
-    r-dt \
-    r-fivethirtyeight \
-    r-gargle \
-    r-ggally \
-    r-ggraph \
-    r-igraph \
-    r-kableextra \
-    r-keras \
-    r-knitr \
-    r-leaflet \
-    r-learnr \
-    r-mass \
-    r-mosaic \
-    r-mosaiccore \
-    r-mosaicdata \
-    r-network \
-    r-rcolorbrewer \
-    r-rmarkdown \
-    r-rsqlite \
-    r-skimr \
-    r-statnet \
-    r-tensorflow \
-    r-tidygraph \
-    r-tidyverse && \
+RUN mamba install -y -c conda-forge \
+    keras\
+    r-car\
+    r-cardata\
+    r-ape\
+    r-dbi\
+    r-dbplyr\
+    r-dt\
+    r-fivethirtyeight\
+    r-gargle\
+    r-ggally\
+    r-ggraph\
+    r-igraph\
+    r-kableextra\
+    r-keras\
+    r-knitr\
+    r-leaflet\
+    r-learnr\
+    r-mass\
+    r-mosaic\
+    r-mosaiccore\
+    r-mosaicdata\
+    r-network\
+    r-rcolorbrewer\ 
+    r-rmarkdown\
+    r-rsqlite\
+    r-skimr\
+    r-statnet\
+    r-tensorflow\
+    r-tidygraph\
+    r-tidyverse &&\
+    mamba clean -afy &&\
     /usr/local/bin/fix-permissions "${CONDA_DIR}" || true
 
 
