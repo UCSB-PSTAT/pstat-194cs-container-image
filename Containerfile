@@ -12,7 +12,7 @@ RUN apt update && \
 
 RUN pip install tensorflow-cpu
 
-RUN conda install \
+RUN mamba install \
     keras \
     r-car \
     r-cardata \
